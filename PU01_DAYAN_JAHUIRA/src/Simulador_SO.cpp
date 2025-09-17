@@ -1,5 +1,13 @@
-#include <bits/stdc++.h>
-#include "../config/json.hpp" // nlohmann::json single-header
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <vector>
+#include <deque>
+#include <string>
+#include <algorithm>
+#include <stdexcept>
+#include <climits>
+#include "../config/json.hpp"
 using json = nlohmann::json;
 using namespace std;
 
@@ -335,8 +343,8 @@ public:
     }
 };
 
-int main(int argc, char** argv){
-	ios::sync_with_stdio(false);
+int main(int argc, char** argv) {
+    ios::sync_with_stdio(false);
     cin.tie(nullptr);
     string cfg = "../config/config.json";
     if (argc >= 2) cfg = argv[1];

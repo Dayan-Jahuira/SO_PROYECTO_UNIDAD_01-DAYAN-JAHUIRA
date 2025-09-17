@@ -342,12 +342,11 @@ int main(int argc, char** argv){
     if (argc >= 2) cfg = argv[1];
     Simulator sim;
     try {
-        cout<<"=============="<<endl;
-    	cout<<"== Correcto =="<<endl;
-    	cout<<"=============="<<endl;
+        sim.loadConfig(cfg);
     } catch (exception &e) {
         cerr << "Error: " << e.what() << "\n";
         return 1;
     }
+    sim.run();
     return 0;
 }
